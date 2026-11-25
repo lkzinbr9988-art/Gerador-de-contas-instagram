@@ -1,0 +1,8 @@
+flask
+flask-socketio
+undetected-chromedriver
+selenium
+requests
+beautifulsoup4
+gunicorn
+eventlet
