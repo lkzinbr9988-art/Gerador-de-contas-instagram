@@ -192,6 +192,7 @@ def processo_criacao():
     usuario = f"u_{secrets.token_hex(4)}"
     
     options = uc.ChromeOptions()
+    options.binary_location = "/usr/bin/chromium"
     options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
@@ -264,7 +265,7 @@ def processo_criacao():
         if driver:
             driver.quit()
             log_web("[SISTEMA] Navegador fechado. Processo finalizado.")
-            socketio.emit('finished')
+            socketio.emit("finished")
 
 @app.route('/')
 def index():
