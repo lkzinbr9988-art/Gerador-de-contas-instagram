@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
 ENV CHROME_BINARY=/usr/bin/chromium
 
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requeriments.txt .
+RUN pip install --no-cache-dir -r requeriments.txt
 
 COPY . .
 
